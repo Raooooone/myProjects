@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un médicament</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #282c35;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 300px;
+            background-color: #394048;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-container:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #68a9ff;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #68a9ff;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #68a9ff;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #394048;
+            color: #fff;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border-color: #1c6fd6;
+            outline: none;
+        }
+
+        button {
+            background-color: #1c6fd6;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Ajouter un médicament</h2>
+        <form action="ajoute.jsp" method="post">
+            <label for="nommedicament">Nom du médicament :</label>
+            <input type="text" id="nommedicament" name="nommedicament" required>
+
+            <label for="prixmedicament">Prix du médicament :</label>
+            <input type="text" id="prixmedicament" name="prixmedicament" required>
+
+            <label for="dl">Date limite :</label>
+            <input type="date" id="dl" name="dl" required>
+
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+</body>
+</html>
